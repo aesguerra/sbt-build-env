@@ -6,8 +6,9 @@ object MainApp {
 
   def main(args: Array[String]): Unit = {
     val config = ConfigFactory.load()
-    val env = config.getString("env")
+    val foo = config.getString("minyodev.message")
 
-    println(s"This package runs in $env")
+    println(s"Message $foo")
+    println("Some foo: " + config.getString("some-foo"))
   }
 }
